@@ -24,11 +24,15 @@ function updateCountdown() {
     const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    
+    let message;
+    if (now.getUTCHours() === 10 && now.getUTCMinutes() === 30 && now.getUTCSeconds() === 0) {
+        message = 'Live!';
+    } else {
+        message = `in ${hours}h ${minutes}m ${seconds}s`;
+    }
 
-    document.getElementById('days').textContent = days;
-    document.getElementById('hours').textContent = hours;
-    document.getElementById('minutes').textContent = minutes;
-    document.getElementById('seconds').textContent = seconds;
+    document.getElementById('countdown-results').textContent = message;
 }
 
 // Update the countdown every second
