@@ -10,26 +10,34 @@
  <body>
     <!-- Your content goes here -->
     <p>test</p>
-    <div style="width: 50%; display: flex; margin:auto">
-      <div id="countdown" style="display: flex; flex-direction: row; flex-wrap: nowrap; color: white; font-size: 3vw; margin: auto; gap: 2%; padding: 2%;">
-          <div style="background-color: rgb(12, 88, 158); border-radius: 25%; width: 28%; display: flex; justify-content: center; align-items: center; flex-direction: column; overflow: hidden; flex: 1 0 auto; min-width: 30%;">
-             <span id="days" style="margin-top: 20%;"></span>
-             <p style="margin-bottom: 20%;">Days</p>
-          </div>
-          <div style="background-color: rgb(12, 88, 158); border-radius: 25%; width: 28%; display: flex; justify-content: center; align-items: center; flex-direction: column; overflow: hidden; flex: 1 0 auto; min-width: 30%;">
-                <span id="hours" style="margin-top: 20%;"></span>
-                <p style="margin-bottom: 20%;">Hours</p>
-          </div>
-          <div style="background-color: rgb(12, 88, 158); border-radius: 25%; width: 28%; display: flex; justify-content: center; align-items: center; flex-direction: column; overflow: hidden; flex: 1 0 auto; min-width: 30%;">
-                <span id="minutes" style="margin-top: 20%;"></span>
-                <p style="margin-bottom: 20%;">Minutes</p>
-          </div>
-          <div style="background-color: rgb(12, 88, 158); border-radius: 25%; width: 28%; display: flex; justify-content: center; align-items: center; flex-direction: column; overflow: hidden; flex: 1 0 auto; min-width: 30%;">
-                <span id="seconds" style="margin-top: 20%;"></span>
-                <p style="margin-bottom: 20%;">Seconds</p>
-          </div>
-      </div>
-     </div>
+<div id="countdown-container" style="">
+  <div id="countdown" style="color: white;">
+    <div id="countdown-text"><p>Join us <span id="countdown-results"></span></p></div>
+  </div>
+</div>
+
+<style>
+  #countdown-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .countdown-wrapper {
+    position: relative;
+  }
+
+  #countdown-text {
+    color: white;
+    position: fixed;
+    z-index: 1;
+    margin-left: -5%;
+  }
+
+  #countdown-results-container {
+    position: relative;
+    z-index: 0;
+  }
+</style>
     <script src="https://karl-knapp.github.io/HFAWidgets/countdown.js"></script>
  </body>
 </html>
