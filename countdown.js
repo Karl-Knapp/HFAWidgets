@@ -28,8 +28,9 @@ function updateCountdown() {
     let message;
     if (now.getUTCHours() === 10 && now.getUTCMinutes() === 30 && now.getUTCSeconds() === 0) {
         message = 'Live!';
+        document.getElementById('join-us').textContent = "Join us "
     } else {
-        message = `in ${hours}h ${minutes}m ${seconds}s`;
+        message = `in ${hours}h ${minutes}m ${seconds}s.`;
     }
 
     document.getElementById('countdown-results').textContent = message;
