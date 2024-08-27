@@ -30,7 +30,7 @@ function updateCountdown() {
         message = 'Live!';
         document.getElementById('join-us').textContent = "Join us "
     } else {
-        message = `in ${hours}h ${minutes}m ${seconds}s.`;
+        message = `${hours}h ${minutes}m ${seconds}s.`;
     }
 
     document.getElementById('countdown-results').textContent = message;
