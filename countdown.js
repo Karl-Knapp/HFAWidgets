@@ -1,4 +1,4 @@
-function updateCountdown() {
+/*function updateCountdown() {
     const now = new Date();
     const cstNow = new Date(now.toUTCString());
     cstNow.setHours(cstNow.getHours() - 6); // Convert to CST
@@ -29,16 +29,16 @@ function updateCountdown() {
         message = 'Live!';
         document.getElementById('join-us').textContent = "Join us ";
     } else {
-        message = `${hours}h ${minutes}m ${seconds}s.`;
+        message = `${days}d ${hours}h ${minutes}m ${seconds}s.`;
     }
 
     document.getElementById('countdown-results').textContent = message;
 }
 
 // Update the countdown every second
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 1000);*/
 
-/*function updateCountdown() {
+function updateCountdown() {
     const now = new Date();
     const nextSunday = new Date(now);
     nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7); // Find the next Sunday
@@ -70,11 +70,11 @@ setInterval(updateCountdown, 1000);
         message = 'Live!';
         document.getElementById('join-us').textContent = "Join us "
     } else {
-        message = `${hours}h ${minutes}m ${seconds}s.`;
+        message = `${days}d ${hours}h ${minutes}m ${seconds}s.`;
     }
 
     document.getElementById('countdown-results').textContent = message;
 }
 
 // Update the countdown every second
-setInterval(updateCountdown, 1000);*/
+setInterval(updateCountdown, 1000);
